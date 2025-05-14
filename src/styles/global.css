@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import "tw-animate-css";
+@import url("https://use.typekit.net/zjd5xvg.css");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -42,9 +43,15 @@
 }
 
 :root {
-  --radius: 0.625rem;
+  --font-sans: neue-haas-grotesk-display, sans-serif;
+  --font-weight-sans: 500;
+  --sans-line-height: normal;
+  --sans-letter-spacing: -0.05rem;
+  --font-serif: plantin, sans-serif;
+  --serif-font-weight: 400;
+  --radius: 0.75rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.141 0.005 285.823);
+  --foreground: rgba(18, 17, 12, 1);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
@@ -54,7 +61,7 @@
   --secondary: oklch(0.967 0.001 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
   --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
+  --muted-foreground: rgba(102, 121, 133, 1);
   --accent: oklch(0.967 0.001 286.375);
   --accent-foreground: oklch(0.21 0.006 285.885);
   --destructive: oklch(0.577 0.245 27.325);

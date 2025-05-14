@@ -3,14 +3,14 @@ import { Logo } from '@/components/logo'
 import { Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import React from 'react'
-import { useScroll, motion } from 'motion/react'
+import { useScroll, motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
 const menuItems = [
-    { name: 'Features', href: '#link' },
-    { name: 'Solution', href: '#link' },
-    { name: 'Pricing', href: '#link' },
-    { name: 'About', href: '#link' },
+    { name: 'what', href: '#link' },
+    { name: 'how', href: '#link' },
+    { name: 'who', href: '#link' },
+    { name: 'where', href: '#link' },
 ]
 
 export const HeroHeader = () => {

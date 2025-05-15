@@ -25,15 +25,17 @@ export const HeroHeader = () => {
         return () => unsubscribe()
     }, [scrollYProgress])
 
+    
+    
+
     return (
         <header>
             <nav
                 data-state={menuState && 'active'}
-                className="fixed z-20 w-full pt-2 ">
-                <div className={cn('mx-auto justify-between rounded-3xl px-6 transition-all duration-300 lg:px-12', scrolled && 'bg-background/50 backdrop-blur-2xl')}>
+                className="fixed z-20 w-full rounded-xl">
+                    <div className={cn('max-w-9/10 mx-auto rounded-xl mt-4 px-6 transition-all duration-300 lg:px-12', scrolled && 'backdrop-blur-2xl max-w-9/10 mt-4')}>
                     <motion.div
-                        key={1}
-                        className={cn('relative flex flex-wrap items-center justify-between py-3 duration-200 lg:gap-0 lg:py-6', scrolled && 'lg:py-4')}>
+                        className={cn('relative transition-all flex flex-wrap items-center justify-between py-3 duration-200', scrolled && 'mt-4')}>
                         <div className="flex w-full items-center justify-between">
                             <a aria-label="home" className="flex items-center space-x-2" href="/">
                                     <Logo />

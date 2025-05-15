@@ -17,10 +17,37 @@ import HeroSection from '@/components/hero-section';
 
 	<body>
 		<HeroHeader client:load />
-		<HeroSection/>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>betch</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-		</div>
+		<main>
+			<HeroSection/>
+				<section class="px-6 min-h-svh py-6 antialiased flex flex-col lg:px-8 2xl:items-center 2xl:mx-auto">
+					<div class="container flex flex-col h-full flex-1 justify-between">
+						<div>
+						<h2 class="text-4xl tracking-[-0.1rem] leading-none text-pretty mb-4 md:text-5xl xl:text-6xl">We’re bringing back what matters most to the community – no more lost connections or creativity to faceless algorithms.</h2>
+						<!-- <h2 class="text-4xl tracking-[-0.1rem] leading-none text-balance mb-4 md:text-5xl xl:text-6xl"></h2> -->
+						<h2 class="text-4xl font-bold font-serif tracking-[-0.225rem] leading-none md:text-5xl xl:text-6xl">Here's our plan:</h2>
+						</div >
+						<ul class="list-inside text-xl mt-6 font-normal text-pretty lg:text-3xl lg:mt-8  lg:pl-16 xl:text-4xl">
+							<li>Personalized discovery – an algorithm that works for you, not against you.</li>
+							<li>Intuitive, beautiful interface – <span class="italic font-bold text-(--color-chart-3)">effortless</span> browsing and selling.</li>
+							<li>Smarter search & filters – find exactly what you want, <span class="italic font-bold text-(--color-chart-3)">fast.</span></li>
+							<li>Truly <span class="italic font-bold text-(--color-chart-3)">free</span> ad posting – no hidden fees, ever.</li>
+							<li><span class="italic font-bold text-(--color-chart-3)">Support</span> for creators – special terms and spotlights for artists, tinkerers and artisans.</li>
+							<li>Real <span class="italic font-bold text-(--color-chart-3)">social</span> events – flea markets, workshops, and pop-ups.</li>
+						</ul>
+						<div class="flex flex-col mt-8 lg:mt-16">
+							<h2 class=" text-4xl tracking-[-0.1rem] leading-none text-pretty mb-4 md:text-5xl xl:text-6xl">And most importantly: </h2>
+						<h2 class="text-bold text-4xl font-bold font-serif tracking-[-0.225rem] leading-none md:text-5xl xl:text-6xl text-(--color-chart-3)">We’ll keep improving-listening, building, and celebrating our community, again and again.</h2>
+					</div>
+				</div>	
+			</section>
+			<section class="px-6 min-h-svh py-16 antialiased flex flex-col lg:px-8">
+				<div class="container flex flex-col h-full justify-between 2xl:mx-auto">
+					<h2 class="text-4xl font-bold text-2xl lg:text-5xl xl:text-7xl">How?</h2>
+					<div class="grid place-items-center h-screen content-center">
+						<Button>betch</Button>
+					</div>
+				</div>
+			</section>
+		</main>
 	</body>
 </html>

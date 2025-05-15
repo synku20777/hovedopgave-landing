@@ -9,8 +9,7 @@ export default function HeroSection() {
     return (
         <>
             <HeroHeader />
-            <main className="overflow-x-hidden">
-                <section className='h-lvh'>
+                <section className='overflow-hidden h-lvh'>
                     <div className="py-24 md:pb-32 lg:pb-36 lg:pt-72">
                         <div className="relative mx-auto flex flex-col px-6 lg:px-12">
                             <motion.div className="text-white mx-auto flex flex-col max-w-lg items-center text-center duration-500 lg:max-w-full">
@@ -18,7 +17,9 @@ export default function HeroSection() {
                                 <h1 className="font-bold tracking-[-0.315rem] text-7xl/14 md:text-8xl/18 xl:text-9xl/24"><span className='italic mix-blend-difference'>New </span> way of selling <span className='italic mix-blend-exclusion'>old </span> stuff</h1>
                                 
                                 <div className="mt-12 w-2/5 flex flex-col items-center justify-center gap-2 md: w-full lg:w-2/5">
+                                    <h4 className='font-bold tracking-tight'>Join email waitlist</h4>
                                     <Input className='' placeholder='email@example.com'/>
+                                    <p>No spam, only progress.</p>
                                     <Button 
                                         asChild
                                         size="lg"
@@ -27,7 +28,6 @@ export default function HeroSection() {
                                             <span className="text-nowrap">Sign Up</span>
                                         </a>
                                     </Button>
-                                    <p>No spam, only progress.</p>
                                 </div>
                             </motion.div>
                         </div>
@@ -43,7 +43,6 @@ export default function HeroSection() {
                     </div>
                     </div>
                 </section>
-        </main>
         </>
     )
 }

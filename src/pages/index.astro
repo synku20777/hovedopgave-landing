@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { HeroHeader } from '@/components/header';
 import CallToAction from '@/components/CTA';
 import HeroSection from '@/components/hero-section';
+import Footer from '@/components/footer';
 ---
 
 <html lang="en">
@@ -74,10 +75,15 @@ import HeroSection from '@/components/hero-section';
 				</div>
 			</section>
 			<section class="px-6 min-h-svh py-16 flex flex-col justify-between 2xl:items-center 2xl:mx-auto 2xl:container">
-				<div class="grid gap-6 sm:grid-cols-2">
-			<CallToAction></CallToAction>
+				<div class="flex flex-col gap-12 flex-1 lg:flex-row md:gap-8 justify-between">
+					<CallToAction></CallToAction>
+					<div class="relative w-full flex items-end">
+						<img class="object-contain" src="public/Frame 1597881273.jpg" alt="">
+						<div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(250, 246, 240, 1) 1%, rgba(250, 246, 240, 0) 40%);"></div>
+					</div>
 				</div>
 		</section>
 		</main>
+		<Footer />
 	</body>
 </html>

@@ -18,7 +18,7 @@ export default function HeroSection() {
                                 
                                 <div className="mt-12 w-2/5 flex flex-col items-center justify-center gap-2 md: w-full lg:w-2/5">
                                     <h4 className='font-bold tracking-tight'>Join email waitlist</h4>
-                                    <Input className='' placeholder='email@example.com'/>
+                                    <Input className='' placeholder='Your email address'/>
                                     <p>No spam, only progress.</p>
                                     <Button 
                                         asChild

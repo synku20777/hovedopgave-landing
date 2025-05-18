@@ -1,0 +1,55 @@
+---
+// Import a feature card component we'll create
+import FeatureCard from '../ui/FeatureCard.astro';
+
+// Feature data to avoid repetition
+const features = [
+  {
+    title: "Pro Tools for Every Seller",
+    description: "One-click pricing suggestions, performance dashboards, and promo options help side-hustlers look like pros—and grow like them.",
+    colSpan: "col-span-2"
+  },
+  {
+    title: "Sustainable by Design",
+    description: "Every resale extends a product's life and slashes waste, attracting eco-conscious shoppers eager to buy green.",
+  },
+  {
+    title: "List & Buy in Seconds",
+    description: "Intuitive design and smart search make it effortless for anyone — especially Gen Z—to post items or find exactly what they're after.",
+  },
+  {
+    title: "Built-In Trust & Safety",
+    description: "Verified profiles, ratings, and escrow-style payments give every transaction the same confidence as buying new.",
+    colSpan: "col-span-2"
+  },
+  {
+    title: "Onboarding in Under 2 Minutes",
+    description: "Sign up, list an item, get instant support — no friction, just marketplace momentum.",
+    colSpan: "col-span-2"
+  }
+];
+---
+
+<section class="px-6 min-h-svh py-16 flex flex-col justify-between xl:items-center xl:mx-auto xl:container">
+  <div class="flex flex-col justify-between">
+    <h2 class="text-4xl font-bold lg:text-5xl xl:text-7xl">How?</h2>
+    
+    <div class="mt-12 flex flex-col gap-8 sm:grid lg:grid-cols-6 lg:grid-rows-4 lg:gap-4">
+      <!-- Infographic image -->
+      <div class="col-span-4 row-span-4 items-center justify-center flex">
+        <img src="/infographic.png" alt="Infographic explaining the process">
+      </div>
+      
+      <!-- Features grid -->
+      <div class="w-full grid grid-cols-2 auto-rows-min gap-x-[1rem] gap-y-[40px] h-fit sm:col-span-2 sm:row-span-4">
+        {features.map(feature => (
+          <FeatureCard
+            title={feature.title}
+            description={feature.description}
+            colSpan={feature.colSpan}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

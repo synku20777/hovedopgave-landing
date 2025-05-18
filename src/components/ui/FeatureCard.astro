@@ -1,0 +1,18 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  colSpan?: string;
+}
+
+const { title, description, colSpan = "" } = Astro.props;
+---
+
+<article class={`h-fit ${colSpan}`}>
+  <h3 class="text-2xl font-bold leading-none font-serif tracking-tight sm:tracking-[-0.225rem] sm:text-4xl">
+    {title}
+  </h3>
+  <p class="text-lg leading-none text-pretty sm:text-xl">
+    {description}
+  </p>
+</article>

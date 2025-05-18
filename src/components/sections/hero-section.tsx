@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
-import { HeroHeader } from './header'
+import { HeroHeader } from '../header'
 import { ChevronRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Input } from '@/components/ui/input'
@@ -23,7 +23,7 @@ export default function HeroSection() {
                                     <Button 
                                         asChild
                                         size="lg"
-                                        className="h-12 mt-4 text-base">
+                                        className=" mt-4 text-base">
                                         <a href="#link">
                                             <span className="text-nowrap">Sign Up</span>
                                         </a>

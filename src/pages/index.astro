@@ -4,8 +4,12 @@ import '../styles/global.css';
 import { Button } from "@/components/ui/button"
 import { HeroHeader } from '@/components/header';
 import CallToAction from '@/components/CTA';
-import HeroSection from '@/components/hero-section';
+import HeroSection from '@/components/sections/hero-section';
 import Footer from '@/components/footer';
+import Proposition from '@/components/sections/proposition.astro';
+import How from '@/components/sections/how.astro';
+import CTA from '@/components/sections/renderCTA.astro';
+import Main from '@/layouts/main.astro';
 ---
 
 <html lang="en">
@@ -18,71 +22,12 @@ import Footer from '@/components/footer';
 	</head>
 
 	<body class="antialiased md:subpixel-antialiased">
-		<HeroHeader client:load />
+		<HeroHeader client:only />
 		<main>
 			<HeroSection/>
-				<section class="px-6 min-h-svh py-6 flex flex-col lg:px-8 2xl:items-center 2xl:mx-auto 2xl:container">
-					<div class="flex flex-col h-full flex-1 justify-between">
-						<div>
-						<h2 class="text-4xl tracking-[-0.1rem] leading-none text-pretty mb-4 md:text-5xl xl:text-6xl">We’re bringing back what matters most to the community – no more lost connections or creativity to faceless algorithms.</h2>
-						<!-- <h2 class="text-4xl tracking-[-0.1rem] leading-none text-balance mb-4 md:text-5xl xl:text-6xl"></h2> -->
-						<h2 class="text-4xl font-bold font-serif tracking-[-0.225rem] leading-none md:text-5xl xl:text-6xl">Here's our plan:</h2>
-						</div >
-						<ul class="list-inside text-xl mt-6 font-normal text-pretty lg:text-3xl lg:mt-8  lg:pl-16 xl:text-5xl">
-							<li>Personalized discovery – an algorithm that works for you, not against you.</li>
-							<li>Intuitive, beautiful interface – <span class="italic font-bold text-(--color-chart-3)">effortless</span> browsing and selling.</li>
-							<li>Smarter search & filters – find exactly what you want, <span class="italic font-bold text-(--color-chart-3)">fast.</span></li>
-							<li>Truly <span class="italic font-bold text-(--color-chart-3)">free</span> ad posting – no hidden fees, ever.</li>
-							<li><span class="italic font-bold text-(--color-chart-3)">Support</span> for creators – special terms and spotlights for artists, tinkerers and artisans.</li>
-							<li>Real <span class="italic font-bold text-(--color-chart-3)">social</span> events – flea markets, workshops, and pop-ups.</li>
-						</ul>
-						<div class="flex flex-col mt-8 lg:mt-16">
-							<h2 class=" text-4xl tracking-[-0.1rem] leading-none text-pretty mb-4 md:text-5xl xl:text-6xl">And most importantly: </h2>
-						<h2 class="text-bold text-4xl font-bold font-serif tracking-[-0.225rem] leading-none md:text-5xl xl:text-6xl text-(--color-chart-3)">We’ll keep improving-listening, building, and celebrating our community, again and again.</h2>
-					</div>
-				</div>	
-			</section>
-			<section class="px-6 min-h-svh py-16 flex flex-col justify-between 2xl:items-center 2xl:mx-auto 2xl:container">
-				<div class="flex flex-col justify-between">
-					<h2 class="text-4xl font-bold text-2xl lg:text-5xl xl:text-7xl">How?</h2>
-					<div class="mt-12 flex flex-col h-fit flex flex-col gap-8 sm:grid lg:grid-cols-6 lg:grid-rows-4 lg:gap-4">
-						<div class="col-span-4 row-span-4 items-center justify-center flex">
-							<img class="cover" src="public/infographic.png" alt="meme">
-						</div>
-						<div class=" w-full grid grid-cols-2 auto-rows-min gap-x-[1rem] gap-y-[40px] h-fit sm:col-span-2 sm:row-span-4">
-							<div class="col-span-2 h-fit">
-								<h3 class="text-2xl font-bold leading-none font-serif tracking-tight sm:tracking-[-0.225rem] sm:text-4xl">Pro Tools for Every Seller</h3>
-								<p class="text-lg leading-none text-pretty sm:text-xl">One-click pricing suggestions, performance dashboards, and promo options help side-hustlers look like pros—and grow like them.</p>
-							</div>
-							<div class="row-start-2 h-fit">
-								<h3 class="text-2xl font-bold leading-none font-serif tracking-tight sm:tracking-[-0.225rem] sm:text-4xl">Sustainable by Design</h3>
-								<p class="text-lg leading-none text-pretty sm:text-xl">Every resale extends a product’s life and slashes waste, attracting eco-conscious shoppers eager to buy green.</p>
-							</div>
-							<div class="row-start-2 h-fit">
-								<h3 class="text-2xl font-bold leading-none font-serif tracking-tight sm:tracking-[-0.225rem] sm:text-4xl">List & Buy in Seconds</h3>
-								<p class="text-lg leading-none text-pretty sm:text-xl">Intuitive design and smart search make it effortless for anyone — especially Gen Z—to post items or find exactly what they’re after.</p>
-							</div>
-							<div class="col-span-2 h-fit">
-								<h3 class="text-2xl font-bold leading-none font-serif tracking-tight sm:tracking-[-0.225rem] sm:text-4xl">Built-In Trust & Safety</h3>
-								<p class="text-lg leading-none text-pretty sm:text-xl">Verified profiles, ratings, and escrow-style payments give every transaction the same confidence as buying new.</p>
-							</div>
-							<div class="col-span-2 row-start-4 h-fit">
-								<h3 class="text-2xl font-bold leading-none font-serif tracking-tight sm:tracking-[-0.225rem] sm:text-4xl">Onboarding in Under 2 Minutes</h3>
-								<p class="text-lg font-sans leading-none text-pretty sm:text-xl">Sign up, list an item, get instant support — no friction, just marketplace momentum.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="px-6 min-h-svh py-16 flex flex-col justify-between 2xl:items-center 2xl:mx-auto 2xl:container">
-				<div class="flex flex-col gap-12 flex-1 lg:flex-row md:gap-8 justify-between">
-					<CallToAction></CallToAction>
-					<div class="relative w-full flex items-end">
-						<img class="object-contain" src="public/Frame 1597881273.jpg" alt="">
-						<div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(250, 246, 240, 1) 1%, rgba(250, 246, 240, 0) 40%);"></div>
-					</div>
-				</div>
-		</section>
+			<Proposition/>
+			<How />
+			<CTA />
 		</main>
 		<Footer />
 	</body>

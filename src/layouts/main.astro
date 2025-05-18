@@ -1,17 +1,41 @@
 ---
 import '../styles/global.css';
+import { HeroHeader } from '../components/header';
+import FooterSection from '../components/footer';
 
-const { content } = Astro.props;
+
+export const prerender = true;
+
+export const { content = {
+  title: "Aurora Landing",
+  meta: [
+    { charset: "utf-8" },
+    { name: "viewport", content: "width=device-width" },
+    { name: "generator", content: Astro.generator }
+  ],
+  link: [
+    { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }
+  ]
+}} = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{content.title}</title>
-	</head>
-	<body class="font-sans antialiased">
-		<slot />
-	</body>
+    <head>
+        {content.meta?.map((meta: { charset?: string; name?: string; content?: string }) => 
+            meta.charset ? 
+                <meta charset={meta.charset} /> : 
+                <meta name={meta.name} content={meta.content} />
+        )}
+        {content.link?.map((link: { rel: string; type: string; href: string }) => 
+            <link rel={link.rel} type={link.type} href={link.href} />
+        )}
+        <title>{content.title}</title>
+    </head>
+    <body class="font-sans antialiased md:subpixel-antialiased">
+		<HeroHeader client:only />
+
+        <slot />
+		
+		<FooterSection />
+    </body>
 </html>

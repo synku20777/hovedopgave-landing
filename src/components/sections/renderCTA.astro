@@ -1,0 +1,24 @@
+---
+import CallToAction from '../CTA.tsx';
+import { Image } from 'astro:assets';
+---
+
+<section class="container px-6 py-16 min-h-svh flex flex-col justify-between mx-auto">
+    <div class="flex flex-col lg:flex-row gap-12 md:gap-8 justify-between flex-1">
+        <CallToAction />
+        
+        <div class="relative w-full flex items-end">
+            <Image
+                format="avif"
+                src="/Frame 1597881273.jpg" 
+                alt="Call to action visual" 
+                width={600}
+                height={400}
+                class="object-contain" 
+            />
+            <div 
+                class="absolute inset-0 pointer-events-none bg-gradient-to-t from-[rgba(250,246,240,1)] from-1% to-[rgba(250,246,240,0)] to-40%"
+            ></div>
+        </div>
+    </div>
+</section>

@@ -48,7 +48,7 @@ export const HeroHeader = () => {
             <nav className="fixed z-20 w-full rounded-xl">
                 {isMounted && (
                     <motion.div
-                        className="mt-4 max-w-9/10 mx-auto rounded-xl px-6 lg:px-12"
+                        className={cn('max-w-9/10 mx-auto rounded-xl px-6 lg:px-12 duration-200', scrolled && 'mt-4')}
                         variants={containerVariants}
                         initial="top"
                         animate={scrolled ? 'scrolled' : 'top'}

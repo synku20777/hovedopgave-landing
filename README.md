@@ -2,7 +2,9 @@
 
 To run the build: 
 
+```bash
 npm run preview
+```
 
 ## Next steps
 

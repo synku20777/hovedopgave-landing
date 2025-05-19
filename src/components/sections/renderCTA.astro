@@ -9,8 +9,8 @@ import { Image } from 'astro:assets';
         <div class="relative w-full flex items-end">
             <Image
                 format="avif"
-                src="/Frame 1597881273.jpg" 
-                alt="Call to action visual" 
+                src={`${import.meta.env.BASE_URL}/app-render.jpg`}
+                alt="Two smartphones with the future apps mockup on the screen." 
                 width={600}
                 height={400}
                 class="object-contain" 

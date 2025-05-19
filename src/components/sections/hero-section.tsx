@@ -3,6 +3,8 @@ import { motion } from 'framer-motion'
 import { Input } from '@/components/ui/input'
 
 export default function HeroSection() {
+    const basePath = '/hovedopgave-landing';
+
     return (
         <>
         <section className='overflow-hidden h-lvh'>
@@ -30,7 +32,7 @@ export default function HeroSection() {
                 <div className="h-lvh absolute inset-0 -z-10 rounded-b-4xl overflow-hidden bg-zinc-950">
                 <div className="relative blur-xl">
                     <img
-                        src="/61fd147e9c25df30637369a76aaf6bdd0c772b44.gif"
+                        src={`${basePath}/61fd147e9c25df30637369a76aaf6bdd0c772b44.gif`}
                         alt="A person going through a few clothing things in a box, blurred out"
                         className="size-full object-cover w-full h-full opacity-60"
                         loading="lazy"

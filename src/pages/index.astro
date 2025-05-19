@@ -10,22 +10,24 @@ import CTA from '@/components/sections/renderCTA.astro';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Aurora Landing</title>
-	</head>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="canonical" href={Astro.url.href} />
+        <meta name="description" content="Aurora Project reimagines second-hand shopping with personalized discovery, free listings, and a social marketplace. Join our waitlist today and be first to experience a better way to buy and sell pre-loved items." />
+        <title>Aurora Project | A New Way to Buy & Sell Second-Hand Items | Join Waitlist</title>
+    </head>
 
-	<body class="antialiased md:subpixel-antialiased">
-		<HeroHeader client:only />
-		<main>
-			<HeroSection />
-			<Proposition />
-			<How />
-			<CTA />
-		</main>
-		<Footer />
-	</body>
+    <body class="antialiased md:subpixel-antialiased">
+        <HeroHeader client:only />
+        <main>
+            <HeroSection />
+            <Proposition />
+            <How />
+            <CTA />
+        </main>
+        <Footer />
+    </body>
 </html>

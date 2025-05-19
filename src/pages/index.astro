@@ -7,6 +7,9 @@ import Footer from '@/components/footer';
 import Proposition from '@/components/sections/proposition.astro';
 import How from '@/components/sections/how.astro';
 import CTA from '@/components/sections/renderCTA.astro';
+
+// Create a proper canonical URL that combines the site URL and base path
+const canonicalUrl = new URL( 'https://synku20777.github.io/','hovedopgave-landing/').toString();
 ---
 
 <html lang="en">
@@ -15,7 +18,7 @@ import CTA from '@/components/sections/renderCTA.astro';
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
-        <link rel="canonical" href={Astro.url.href} />
+        <link rel="canonical" href={canonicalUrl} />
         <meta name="description" content="Aurora Project reimagines second-hand shopping with personalized discovery, free listings, and a social marketplace. Join our waitlist today and be first to experience a better way to buy and sell pre-loved items." />
         <title>Aurora Project | A New Way to Buy & Sell Second-Hand Items | Join Waitlist</title>
     </head>

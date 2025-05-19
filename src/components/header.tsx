@@ -39,7 +39,7 @@ export const HeroHeader = () => {
             <nav className="fixed z-20 w-full rounded-xl">
                 {isMounted && (
                     <motion.div
-                        className={cn('max-w-9/10 mx-auto rounded-xl px-6 lg:px-12 duration-200', scrolled && 'mt-4')}
+                        className={cn('mt-8 max-w-9/10 mx-auto rounded-xl px-6 lg:px-12 duration-200', scrolled && 'mt-4')}
                         style={{
                             backgroundColor: background,
                             backdropFilter: blur,
@@ -47,7 +47,7 @@ export const HeroHeader = () => {
                         initial={false}
                         animate={false}
                         transition={{
-                            duration: 0.3,
+                            duration: 0.5,
                             ease: "easeInOut"
                         }}
                     >

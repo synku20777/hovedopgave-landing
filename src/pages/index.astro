@@ -1,15 +1,12 @@
 ---
 import '../styles/global.css';
 // Component Imports
-import { Button } from "@/components/ui/button"
 import { HeroHeader } from '@/components/header';
-import CallToAction from '@/components/CTA';
 import HeroSection from '@/components/sections/hero-section';
 import Footer from '@/components/footer';
 import Proposition from '@/components/sections/proposition.astro';
 import How from '@/components/sections/how.astro';
 import CTA from '@/components/sections/renderCTA.astro';
-import Main from '@/layouts/main.astro';
 ---
 
 <html lang="en">
@@ -24,8 +21,8 @@ import Main from '@/layouts/main.astro';
 	<body class="antialiased md:subpixel-antialiased">
 		<HeroHeader client:only />
 		<main>
-			<HeroSection/>
-			<Proposition/>
+			<HeroSection />
+			<Proposition />
 			<How />
 			<CTA />
 		</main>

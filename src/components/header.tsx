@@ -5,10 +5,9 @@ import { useScroll, motion, useTransform } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
 const menuItems = [
-    { name: 'what', href: '#link' },
-    { name: 'how', href: '#link' },
-    { name: 'who', href: '#link' },
-    { name: 'where', href: '#link' },
+    { name: 'what', href: '#proposition' },
+    { name: 'how', href: '#how' },
+    { name: 'where', href: '#cta' },
 ]
 
 export const HeroHeader = () => {

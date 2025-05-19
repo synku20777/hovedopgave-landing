@@ -1,10 +1,9 @@
 import { Button } from '@/components/ui/button'
 
-const links = [
+const menuItems = [
     { name: 'what', href: '#link' },
     { name: 'how', href: '#link' },
-    { name: 'who', href: '#link' },
-    { name: 'where', href: '#link' }
+    { name: 'where', href: '#cta' },
 ]
 
 export default function FooterSection() {
@@ -14,7 +13,7 @@ export default function FooterSection() {
                 <div className="flex flex-wrap justify-between gap-6">
                     <span className="text-muted-foreground order-last block text-center text-sm md:order-first">© {new Date().getFullYear()} Project Aurora, All rights reserved</span>
                     <div className="order-first flex flex-wrap justify-center gap-6 text-sm md:order-last">
-                        {links.map((link, index) => (
+                        {menuItems.map((link, index) => (
                             <Button
                                 variant={'link'}
                                 key={index}

@@ -7,7 +7,7 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://synku20777.github.io',
+  site: 'https://synku20777.github.io/hovedopgave-landing',
   base: 'hovedopgave-landing',
   // output: 'server',
   // adapter: node(),

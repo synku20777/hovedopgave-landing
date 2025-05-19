@@ -1,8 +1,8 @@
 import { Button } from '@/components/ui/button'
 
 const menuItems = [
-    { name: 'what', href: '#link' },
-    { name: 'how', href: '#link' },
+    { name: 'what', href: '#proposition' },
+    { name: 'how', href: '#how' },
     { name: 'where', href: '#cta' },
 ]
 

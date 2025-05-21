@@ -53,7 +53,7 @@ export default function CallToAction() {
                                 <Button 
                                     type="submit"
                                     aria-label="submit">
-                                    <span className="hidden md:block">Sign Up</span>
+                                    <span className="hidden md:block">Join exclusive waitlist</span>
                                     <span className="md:hidden">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                                     </span>
@@ -61,7 +61,7 @@ export default function CallToAction() {
                             </div>
                         </form>
                     </Form>
-                    <p className="mt-4">No spam, only progress.</p>
+                    <p className="mt-4">We reach out every month. No spam, only progress.</p>
                 </div>
     )
 }

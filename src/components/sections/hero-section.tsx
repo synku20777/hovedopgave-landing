@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
-import { Input } from '@/components/ui/input'
+
 
 export default function HeroSection() {
     const basePath = '/hovedopgave-landing';
@@ -15,15 +15,12 @@ export default function HeroSection() {
                         <h1 className="font-bold tracking-[-0.315rem] text-7xl/14 md:text-8xl/18 xl:text-9xl/24"><span className='italic mix-blend-difference'>New </span> way of selling <span className='italic mix-blend-exclusion'>old </span> stuff</h1>
                         
                         <div className="mt-12 w-2/5 flex flex-col items-center justify-center gap-2 md: w-full lg:w-2/5">
-                            <h4 className='font-bold tracking-tight'>Join email waitlist</h4>
-                            <Input className='' placeholder='Your email address'/>
-                            <p>No spam, only progress.</p>
                             <Button 
                                 asChild
                                 size="lg"
                                 className=" mt-4 text-base">
-                                <a href="#link">
-                                    <span className="text-nowrap">Sign Up</span>
+                                <a href="#cta" >
+                                    Join the club
                                 </a>
                             </Button>
                         </div>

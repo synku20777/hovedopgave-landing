@@ -7,7 +7,7 @@ import Footer from '@/components/footer';
 import Proposition from '@/components/sections/proposition.astro';
 import How from '@/components/sections/how.astro';
 import CTA from '@/components/sections/renderCTA.astro';
-
+import Social from '../components/sections/social';
 // Create a proper canonical URL that combines the site URL and base path
 const canonicalUrl = new URL('/hovedopgave-landing/', 'https://synku20777.github.io/').toString();
 ---
@@ -32,5 +32,6 @@ const canonicalUrl = new URL('/hovedopgave-landing/', 'https://synku20777.github
             <CTA />
         </main>
         <Footer />
+        <Social instagramLink="https://www.instagram.com/" />
     </body>
 </html>
